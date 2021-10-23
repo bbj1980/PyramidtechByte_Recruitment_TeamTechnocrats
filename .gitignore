@@ -9,6 +9,8 @@ __pycache__/
 WebApi/JobByte/WebApi/WebApi/bin/
 WebApi/JobByte/WebApi/WebApi/obj/
 
+# Angular
+WebApp/node_modules/
 
 # Distribution / packaging
 .Python
