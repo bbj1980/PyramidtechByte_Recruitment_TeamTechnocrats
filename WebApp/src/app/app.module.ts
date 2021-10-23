@@ -13,13 +13,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HomeComponent } from './Home/Home.component';
 @NgModule({
   declarations: [
     AppComponent,
       JDUploadComponent,
       CVUploadComponent,
       SpinnerComponent,
-      AlertComponent
+      AlertComponent,
+      HomeComponent
    ],
   imports: [
     BrowserModule,
