@@ -1,0 +1,16 @@
+<h1>CV Upload</h1>
+<form #form="ngForm" autocomplete="off">
+  <div class="form-group">
+    <!--  -->
+    <div [formGroup]="myGroup">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label for="file"> Upload File</label>
+          <input #myInput type="file" id="file" formControlName="fileUpload" name="fileUpload"
+            (change)="fileUpload($event)" class="form-control no-border" accept=".doc,.docx,application/msword">
+        </div>
+
+      </div>
+    </div>
+  </div>
+</form>

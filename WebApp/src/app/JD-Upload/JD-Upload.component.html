@@ -1,0 +1,60 @@
+<h1>JD Upload</h1>
+<form  #form="ngForm" autocomplete="off">
+  <div class="form-group">
+
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="file"> Upload File</label>
+            <input #myInput type="file" id="file"  name="fileUpload" (change)="fileUpload($event)"  class="form-control no-border"
+              accept=".doc,.docx,application/msword">
+            </div>
+
+
+        </div>
+  </div>
+
+
+
+  <form [formGroup]="firstFormGroup">
+    <div class="form-group">
+      <label for="position">Position</label>
+      <input type="text" class="form-control" id="position" formControlName="position"  placeholder="Position">
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea type="text" rows="5" class="form-control" id="description" formControlName="description" placeholder="Description"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="techskill">Techskill</label>
+      <textarea type="text" rows="5" class="form-control" id="techskill" formControlName="techskill" placeholder="Techskill"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="softskill">Softskill</label>
+      <textarea type="text" rows="5" class="form-control" id="softskill" formControlName="softskill" placeholder="Softskill"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="education">Education</label>
+      <input type="text" class="form-control" id="education" formControlName="education" placeholder="Education">
+    </div>
+    <div class="form-group">
+      <label for="location">Location</label>
+      <input type="text" class="form-control" id="location" formControlName="location" placeholder="Location">
+    </div>
+    <div class="form-group">
+      <label for="experience">experience</label>
+      <input type="text" class="form-control" id="experience" formControlName="experience" placeholder="Experience">
+    </div>
+    <div class="form-group">
+      <label for="nationality">nationality</label>
+      <input type="text" class="form-control" id="nationality" formControlName="nationality" placeholder="Nationality">
+    </div>
+    <div class="form-group">
+      <label for="comments">comments</label>
+      <input type="text" class="form-control" id="comments" formControlName="comments" placeholder="Comments">
+    </div>
+
+
+    <button type="submit" (click)="submit();" class="btn btn-primary">Submit</button>
+  </form>
+</form>
