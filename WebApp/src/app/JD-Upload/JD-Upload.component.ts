@@ -49,8 +49,8 @@ export class JDUploadComponent implements OnInit {
           this.apiCallService
             .post('api/jobdescription', request)
             .subscribe(response => {
-            this.firstFormGroup.patchValue(response);
-           this.alertService.success("File Uploaded successfully!");
+              this.firstFormGroup.patchValue(response);
+              this.alertService.success("Job description Scanned successfully!");
             });
           // this.firstFormGroup.patchValue({
           //   "position": "Sr. QA – Automation",
@@ -65,7 +65,7 @@ export class JDUploadComponent implements OnInit {
           // });
 
         } else {
-            this.alertService.success("Only .doc file allowed");
+          this.alertService.success("Only .doc file allowed");
         }
       };
     })(f);

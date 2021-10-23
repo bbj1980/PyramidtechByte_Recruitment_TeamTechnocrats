@@ -1,6 +1,7 @@
+import { AlertService } from './../services/alert.service';
 import { WebApiCallService } from './../services/web.api.service';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, NgForm } from '@angular/forms';
+import { FormControl, FormGroup, NgForm, FormBuilder } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -11,10 +12,20 @@ import { HttpClient } from '@angular/common/http';
 
 export class CVUploadComponent implements OnInit {
   myGroup: FormGroup;
-
-  constructor( private apiCallService: WebApiCallService) {
+  firstFormGroup: FormGroup;
+  constructor(fb: FormBuilder, private apiCallService: WebApiCallService, private alertService: AlertService) {
     this.myGroup = new FormGroup({
 
+    });
+    this.firstFormGroup = fb.group({
+      name: '',
+      email: '',
+      contact: '',
+      location: '',
+      education: '',
+      experience: '',
+      nationality: '',
+      comments: ''
     });
   }
 
@@ -57,4 +68,12 @@ export class CVUploadComponent implements OnInit {
     reader.readAsBinaryString(f);
   }
 
+  submit() {
+    this.apiCallService
+      .post('api/savejobdescription', this.firstFormGroup.value)
+      .subscribe(response => {
+        this.alertService.success("JD Creted successfully!");
+      });
+
+  }
 }

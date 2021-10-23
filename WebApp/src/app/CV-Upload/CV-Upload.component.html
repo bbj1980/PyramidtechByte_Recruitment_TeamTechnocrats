@@ -5,12 +5,52 @@
     <div [formGroup]="myGroup">
       <div class="col-md-12">
         <div class="form-group">
-          <label for="file"> Upload File</label>
-          <input #myInput type="file" id="file" formControlName="fileUpload" name="fileUpload"
+          <label for="file">Upload CV file here</label>
+          <input #myInput type="file" id="file"  name="fileUpload"
             (change)="fileUpload($event)" class="form-control no-border" accept=".doc,.docx,application/msword">
         </div>
 
       </div>
     </div>
   </div>
+</form>
+
+
+<form [formGroup]="firstFormGroup">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" formControlName="name"  placeholder="name">
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" class="form-control" id="email" formControlName="email" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="contact">Contact Number</label>
+    <input type="text" class="form-control" id="contact" formControlName="contact" placeholder="Contact Number">
+  </div>
+
+  <div class="form-group">
+    <label for="education">Education</label>
+    <input type="text" class="form-control" id="education" formControlName="education" placeholder="Education">
+  </div>
+  <div class="form-group">
+    <label for="location">Location</label>
+    <input type="text" class="form-control" id="location" formControlName="location" placeholder="Location">
+  </div>
+  <div class="form-group">
+    <label for="experience">experience</label>
+    <input type="text" class="form-control" id="experience" formControlName="experience" placeholder="Experience">
+  </div>
+  <div class="form-group">
+    <label for="nationality">nationality</label>
+    <input type="text" class="form-control" id="nationality" formControlName="nationality" placeholder="Nationality">
+  </div>
+  <div class="form-group">
+    <label for="comments">comments</label>
+    <input type="text" class="form-control" id="comments" formControlName="comments" placeholder="Comments">
+  </div>
+
+
+  <button type="submit" (click)="submit();" class="btn btn-primary">Submit</button>
 </form>
