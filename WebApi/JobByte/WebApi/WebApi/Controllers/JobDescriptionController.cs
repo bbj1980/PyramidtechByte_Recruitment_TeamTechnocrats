@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebApi.Core;
 using WebApi.Models;
+using WebApi.Request;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -39,9 +40,9 @@ namespace WebApi.Controllers
 
         // POST api/<JobDescriptionController>
         [HttpPost]
-        public JobDescription Post([FromBody] string base64encodedstring)
+        public JobDescription Post([FromBody] JDRequest req)
         {
-            return this._processDocument.ExtractJobDescription(base64encodedstring);
+            return this._processDocument.ExtractJobDescription(req.base64String);
 
         }
 
