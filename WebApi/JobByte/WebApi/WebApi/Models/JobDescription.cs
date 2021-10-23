@@ -7,6 +7,7 @@ namespace WebApi.Models
 {
     public class JobDescription
     {
+        public string Name { get; set; }
         public string Position { get; set; }
         public string Description { get; set; }
         public string Techskill { get; set; }
