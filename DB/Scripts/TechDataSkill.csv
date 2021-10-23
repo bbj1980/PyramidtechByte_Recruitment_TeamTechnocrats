@@ -1,0 +1,111 @@
+SkillId,SkillName,SkillMasterId
+1,analytics,1
+2,api,1
+3,aws,1
+4,big data,1
+5,busines intelligence,1
+6,clustering,1
+7,codecoding,1
+8,data,1
+9,database,1
+10,data mining,1
+11,data science,1
+12,deep learning,1
+13,hadoop,1
+14,hypothesis test,1
+15,iot,1
+16,internet,1
+17,machine learning,1
+18,modeling,1
+19,nosql,1
+20,nlp,1
+21,predictive,1
+22,programming,1
+23,python,1
+24,r,1
+25,sql,1
+26,tableau,1
+27,informatica,1
+28,erwin,1
+29,power bi,1
+30,react,2
+31,angular,2
+32,html,2
+33,css,2
+34,javascript,2
+35,http,2
+36,rest,2
+37,black belt,3
+38,capability analysis,3
+39,control charts,3
+40,doe,3
+41,dmaic,3
+42,fishbone,3
+43,green belt,3
+44,ishikawa,3
+45,iso,3
+46,kaizen,3
+47,kpi,3
+48,lean,3
+49,metrics,3
+50,pdsa,3
+51,performance improvement,3
+52,process improvement,3
+53,quality,3
+54,quality circles,3
+55,quality tools,3
+56,root cause,3
+57,six sigma,3
+58,stability analysis,3
+59,statistical analysis,3
+60,tqm,3
+61,automation,4
+62,bottleneck,4
+63,constraints,4
+64,cycle time,4
+65,efficiency,4
+66,fmea,4
+67,machinery,4
+68,maintenance,4
+69,manufacture,4
+70,line balancing,4
+71,oee,4
+72,operations,4
+73,operations research,4
+74,optimization,4
+75,overall equipment effectiveness,4
+76,pfmea,4
+77,process,4
+78,process mapping,4
+79,production,4
+80,resources,4
+81,safety,4
+82,stoppage,4
+83,value stream mapping,4
+84,utilization,4
+85,apics,5
+86,customer,5
+87,customs,5
+88,delivery,5
+89,distribution,5
+90,eoq,5
+91,epq,5
+92,fleet,5
+93,forecast,5
+94,inventory,5
+95,logistic,5
+96,materials,5
+97,outsourcing,5
+98,adverse events,6
+99,care,6
+100,clinic,6
+101,cphq,6
+102,ergonomics,6
+103,healthcare,6
+104,health,6
+105,hospital,6
+106,human factors,6
+107,medical,6
+108,near misses,6
+109,patient,6
+110,reporting system,6
