@@ -5,10 +5,9 @@ from DictionarySetup import terms
 from sqlinsert import insertResumeSkill
 from WorldtoPdf import ConvertdDoctoPdf
 import pathlib
-
 def main():
-    resumeName='Bharat.Joshi.pdf'
-    # fileExtension = pathlib.Path(resumeName).suffix
+    resumeName='Bharat.Joshi1.pdf'
+    fileExtension = pathlib.Path(resumeName).suffix
     # if(fileExtension != 'pdf'):
     #     resumeName= ConvertdDoctoPdf(resumeName)
     compileTextFromResume = ReadandSummaryFile(resumeName);

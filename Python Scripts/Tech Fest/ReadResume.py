@@ -6,7 +6,7 @@ import pandas as pd
 def ReadandSummaryFile(fileName):
     try:
         # Open pdf file
-        pdfFileObj = open(r'E:\Projects\Tech Fest\PyramidtechByte_Recruitment_TeamTechnocrats\Python Scripts\Tech Fest\Bharat Joshi.pdf','rb')
+        pdfFileObj = open(fileName,'rb')
         # Read file
         pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
         # Get total number of pages
