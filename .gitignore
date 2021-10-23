@@ -5,6 +5,10 @@ __pycache__/
 
 # C extensions
 *.so
+# C#
+WebApi/JobByte/WebApi/WebApi/bin/
+WebApi/JobByte/WebApi/WebApi/obj/
+
 
 # Distribution / packaging
 .Python
