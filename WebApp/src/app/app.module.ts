@@ -14,14 +14,16 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './Home/Home.component';
+import { FeedbackComponent } from './Feedback/Feedback.component';
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
       JDUploadComponent,
       CVUploadComponent,
       SpinnerComponent,
       AlertComponent,
-      HomeComponent
+      HomeComponent,
+      FeedbackComponent
    ],
   imports: [
     BrowserModule,
