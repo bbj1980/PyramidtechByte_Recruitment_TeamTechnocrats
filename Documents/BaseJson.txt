@@ -1,0 +1,19 @@
+{
+  "Name": "Bharat",
+  "email": "bbj1980@gmail.com",
+  "phonenumber": ,
+  "appliedrole": """resume": {
+    "resumename": "",
+    "resumePathPhysical": 
+  },
+  "Technicalskils": {
+    "techskill1": "",
+    "techskill2": "",
+    
+  },
+  "Location": {
+    "Noida",
+    "Hyd",
+    "Chandigarh"
+  }
+}CandidateCandidate_technicalskillsLocation_MasterArea_masterQuality/SixSigmaFullStackDatabaseProjectmanagementDataanalyticsJD1ProjectManagerDatabaseJD2ANgularReactWcfResumeR1Quality10Database5R2
