@@ -2,8 +2,8 @@
 <form  #form="ngForm" autocomplete="off">
   <div class="form-group">
 
-        <div class="col-sm-6">
-          <div class="form-group m-t-15">
+        <div class="col-md-12">
+          <div class="form-group">
             <label for="file"> Upload File</label>
             <input #myInput type="file" id="file"  name="fileUpload" (change)="fileUpload($event)"  class="form-control no-border"
               accept=".doc,.docx,application/msword">
@@ -22,15 +22,15 @@
     </div>
     <div class="form-group">
       <label for="description">Description</label>
-      <input type="text" class="form-control" id="description" formControlName="description" placeholder="Description">
+      <textarea type="text" rows="5" class="form-control" id="description" formControlName="description" placeholder="Description"></textarea>
     </div>
     <div class="form-group">
       <label for="techskill">Techskill</label>
-      <input type="text" class="form-control" id="techskill" formControlName="techskill" placeholder="Techskill">
+      <textarea type="text" rows="5" class="form-control" id="techskill" formControlName="techskill" placeholder="Techskill"></textarea>
     </div>
     <div class="form-group">
       <label for="softskill">Softskill</label>
-      <input type="text" class="form-control" id="softskill" formControlName="softskill" placeholder="Softskill">
+      <textarea type="text" rows="5" class="form-control" id="softskill" formControlName="softskill" placeholder="Softskill"></textarea>
     </div>
 
     <div class="form-group">
@@ -54,7 +54,7 @@
       <input type="text" class="form-control" id="comments" formControlName="comments" placeholder="Comments">
     </div>
 
-''
+
     <button type="submit" (click)="submit();" class="btn btn-primary">Submit</button>
   </form>
 </form>
