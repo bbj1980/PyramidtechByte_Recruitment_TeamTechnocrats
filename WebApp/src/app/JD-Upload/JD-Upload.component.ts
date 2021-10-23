@@ -75,7 +75,7 @@ export class JDUploadComponent implements OnInit {
 
   submit() {
     this.apiCallService
-      .post('api/savejobdescription', this.firstFormGroup.value)
+      .post('api/jobdescription/savejobdescription', this.firstFormGroup.value)
       .subscribe(response => {
         this.alertService.success("JD Creted successfully!");
       });
