@@ -1,10 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApi.Core;
+using WebApi.Data;
 using WebApi.Models;
 using WebApi.Request;
 
@@ -19,10 +22,14 @@ namespace WebApi.Controllers
 
         private readonly ILogger<JobDescriptionController> _logger;
         private readonly ProcessDocument _processDocument;
+        private readonly ApiDBContext _context;
 
         public JobDescriptionController(ILogger<JobDescriptionController> logger)
         {
-            _logger = logger; _processDocument = new ProcessDocument();
+            _logger = logger;
+            _processDocument = new ProcessDocument();
+            _context = new ApiDBContext();
+
         }
         // GET: api/<JobDescriptionController>
         [HttpGet]
@@ -43,6 +50,36 @@ namespace WebApi.Controllers
         public JobDescription Post([FromBody] JDRequest req)
         {
             return this._processDocument.ExtractJobDescription(req.base64String);
+
+        }
+
+        [HttpPost]
+        [Route("savejobdescription")]
+        public void SaveJobDescription([FromBody] JobDescription req)
+        {
+
+
+
+
+            List<SqlParameter> sqlParams = new List<SqlParameter>()
+{
+new SqlParameter("@JDName",req.Position),
+new SqlParameter("@JDDescription",req.Description),
+new SqlParameter("@Position",req.Position),
+new SqlParameter("@TechSkill",req.Techskill),
+new SqlParameter("@SoftSkill",req.Softskill),
+new SqlParameter("@Location",req.Location==null?"":req.Location),
+new SqlParameter("@Education",req.Education),
+new SqlParameter("@Experience",req.Experience),
+new SqlParameter("@Nationality",req.Nationality),
+new SqlParameter("@Comments",req.Comments),
+new SqlParameter("@EnteredBy","Sagir")
+
+};
+
+
+
+            var result = _context.Database.ExecuteSqlRaw(@"EXEC [dbo].[sJDAddDetails]    @JDName,@JDDescription ,@Position ,@TechSkill,@SoftSkill,@Location ,@Education,@Experience,@Nationality,@Comments ,@EnteredBy ", sqlParams);
 
         }
 

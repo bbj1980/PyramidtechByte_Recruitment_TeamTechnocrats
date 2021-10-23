@@ -32,4 +32,4 @@ def ReadandSummaryFile(fileName):
         import traceback, sys
         tb = sys.exc_info()[2]
         print("Line %i" % tb.tb_lineno)
-        print (e.message)
+        print (e.strerror)
