@@ -1,6 +1,5 @@
 # Import required libraries
 import PyPDF2
-import re
 import string
 import pandas as pd
 def ReadandSummaryFile(fileName):
@@ -20,12 +19,13 @@ def ReadandSummaryFile(fileName):
             pageObj = pdfReader.getPage(count)
             count +=1
             resumeText += pageObj.extractText()
+        normalResumeText = resumeText
         # Convert all strings to lowercase
         resumeText = resumeText.lower()
         # Remove numbers
-        resumeText = re.sub(r'\d+','',resumeText)
+        #resumeText = re.sub(r'\d+','',resumeText)
         # Remove punctuation
-        resumeText = resumeText.translate(str.maketrans('','',string.punctuation))
+        #resumeText = resumeText.translate(str.maketrans('','',string.punctuation))
         return resumeText
     except Exception as e:
         # If an error occurred, print line number and error message

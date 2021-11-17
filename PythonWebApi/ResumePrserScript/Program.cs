@@ -9,11 +9,16 @@ namespace ResumePrserScript
     {
         public static void Main(string[] args)
         {
-            ScriptRuntime ipy = Python.CreateRuntime();
 
-            dynamic test1 = ipy.UseFile("E:\\Projects\\Tech Fest\\PyramidtechByte_Recruitment_TeamTechnocrats\\Python Scripts\\Tech Fest\\main.py");
-            // Call function   
-            test1.main();
+
+            var engine = Python.CreateEngine(); // Extract Python language engine from their grasp
+            var scope = engine.CreateScope(); // Introduce Python namespace (scope)
+            var paths = engine.GetSearchPaths();
+            paths.Add("c:\\my_libs");
+            engine.SetSearchPaths(paths);
+            ScriptSource source = engine.CreateScriptSourceFromFile("E:\\Projects\\Tech Fest\\PyramidtechByte_Recruitment_TeamTechnocrats\\Python Scripts\\Tech Fest\\main.py"); // Load the script
+            object result = source.Execute(scope);
+
 
             CreateHostBuilder(args).Build().Run();
         }

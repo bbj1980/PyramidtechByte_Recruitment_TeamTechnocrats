@@ -4,8 +4,7 @@ def ProfileResume(terms,text):
     programmingLanguage = ''
     candidateProfile =[]
     obj={}
-    # Create an empty list where the scores will be stored
-    scores = []
+   
     # Obtain the scores for each area
     for area in terms.keys():
         programmingLanguage=''

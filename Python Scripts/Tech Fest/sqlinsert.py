@@ -1,6 +1,6 @@
 import pyodbc 
 
-def insertResumeSkill(insertResumeSkill,resumeName):
+def InsertResumeSkill(insertResumeSkill,resumeName):
     conn = pyodbc.connect('Driver={ODBC Driver 17 for SQL Server};'
                     'Server=tcp:techfestpyramid.database.windows.net,1433;'
                     'Database=JobByteDB;'
